@@ -25,7 +25,7 @@ class MyProfile extends Component {
   handleSubmit = (event) => {
     console.log(this.state);
     event.preventDefault();
-  }
+  };
 
   render() {
     return (
@@ -50,14 +50,13 @@ class MyProfile extends Component {
             <option value="female">Female</option>
           </select>
           <h6>Description</h6>
-          <input
-            type="textarea"
-            className="form-control textarea"
+          <textarea
+            className="textarea"
             value={this.state.description}
             onChange={(e) => this.handleChange("description", e)}
             id="description"
-          />
-          <div className="form-group form-check">
+          ></textarea>
+          <div className="form-group form-check" id="form-check">
             <input
               type="checkbox"
               className="form-check-input"
@@ -78,6 +77,7 @@ class MyProfile extends Component {
               !this.state.isReadTheTerms
             }
             className="btn btn-primary"
+            id="submit-button"
           >
             Submit
           </button>
