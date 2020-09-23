@@ -22,9 +22,14 @@ class MyProfile extends Component {
     });
   };
 
+  handleSubmit = (event) => {
+    console.log(this.state);
+    event.preventDefault();
+  }
+
   render() {
     return (
-      <div className="my-form">
+      <div className="my-form" onSubmit={this.handleSubmit}>
         <form>
           <h2>My Profile</h2>
           <h6>Name</h6>
